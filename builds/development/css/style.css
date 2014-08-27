@@ -1,0 +1,334 @@
+/* @override 
+  http://planetoftheweb.com/_/css/styles.css */
+
+@import url("http://fonts.googleapis.com/css?family=Bree+Serif|Merriweather:400,300,700,900|Droid+Sans:400,700");
+
+/* Reset Styles */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+html {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+q, blockquote {
+  quotes: none; }
+
+  q:before, q:after, blockquote:before, blockquote:after {
+    content: "";
+    content: none; }
+
+a img {
+  border: none; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block; }
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+
+/* Base Styles */
+
+.cf:before,
+.cf:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.cf:after {
+    clear: both;
+}
+
+html {
+  background-color: #023E54; 
+  background-image: url(images/fallback-gradient.png); 
+  background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#023E54), to(#10AAC0));
+  background-image: -webkit-linear-gradient(top, #023E54, #10AAC0); 
+  background-image: -moz-linear-gradient(top, #023E54, #10AAC0);
+  background-image: -o-linear-gradient(top, #023E54, #10AAC0);
+  min-height: 100%;
+  height: auto;
+}
+
+body  {
+  font-family: Merriweather, serif;
+  font-size: 1rem;
+  line-height: 160%;
+  *zoom: 1;
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Bree Serif', serif;
+  font-weight: normal;
+  color: #475b62;
+  text-shadow: 1px 1px rgb(255,255,255, 1);
+}
+
+a {
+  color: #145266;
+  font-family: Bree Serif, serif;
+}
+
+h1{
+  color: #145266;
+  font-size: 2.2rem;
+  line-height: 100%;
+  margin-bottom: 10px;
+}
+
+h2{ 
+  font-size: 1.5rem;
+  line-height: 90%;
+  color: #c61c6f;
+}
+
+h3{ 
+  margin-top: 0;
+  color: #bd3613;
+  line-height: 110%;
+  margin-bottom: 5px;
+}
+
+p {
+  line-height: 1.3rem;
+  color: #475B62;
+  margin-bottom: 10px;
+  font-family: 'Merriweather';
+}
+
+a.small {
+  line-height: 100%;
+  font-size: .9rem;
+}
+
+
+/* Search Styles */
+
+.search {
+  background: #063642;
+  color: #EEE8D5;
+  width: 90%;
+  min-width: 320px;
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 30px;
+  border-radius: 20px;
+  padding: 20px 30px;
+  z-index: 20;
+}
+
+.search h1 {
+  color: #EEE8D5;
+}
+
+.btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 1rem;
+    line-height: 140%;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: #C61C6F;
+    color: #FCF4DC;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+         -o-user-select: none;
+            user-select: none;
+}
+
+.btn .btn-left {
+  float: left;
+}
+
+.btn .btn-right {
+  float: right;
+}
+
+.btn:hover {
+    background: #09576D;
+}
+
+.search label {
+  display: none;
+}
+
+.search input {
+  font-family: 'Droid Sans', sans-serif;
+  width: 100%;
+  padding: 10px 0 10px 15px;
+  font-size: 1rem;
+  color: #475B62;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 10px;
+  outline: 0;
+}
+
+.search .formgroup input {
+  border: 1px solid rgba(0,0,0,0.3);
+  display: inline;
+  width: auto;
+}
+
+.search label.formgroup {
+  display: inline;
+  width: auto;
+}
+
+.search select {
+  display: inline;
+  padding: 10px 0 10px 15px;
+  font-size: 1rem;
+  color: #475B62;
+  background: rgba(255,255,255,0.4);
+  border: 1px solid rgba(0,0,0,0.3);
+  border-radius: 10px;
+  outline: 0;
+}
+
+/* Artist List Styles */
+
+.artistlist {
+  background: #EEE8D5;
+  width: 50%;
+  min-width: 290px;
+  max-width:350px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  border-radius: 0 0 20px 20px;
+  opacity: .95;
+  z-index: 10;
+}
+
+.artistlist ul {
+  margin: 0;
+  padding: 0;
+  background: #FDF6E3;
+}
+
+.artistlist li {
+  margin: 0;
+  padding: 10px 10px 0 10px;
+  border-bottom: 1px dotted black;
+  opacity: .9;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.artistlist a {
+  display: block;
+  text-decoration: none;
+}
+
+.artistlist li:hover {
+  background: #FDF6E3;
+  opacity: 1;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.artist img {
+  display: block;
+  float: left;
+  width: 60px;
+  -webkit-border-radius: 12px;
+  border-radius: 12px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.artist info {
+  display: block;
+  float: left;
+  padding-left: 120px !important;
+}
+
+.artist:last-child {
+  border-bottom:none;
+}
+
+.artistinfo {
+  font-size: 1.1em;
+  line-height: 160%;
+  background: #EEE8D5;
+  color: #0F4150;
+  width: 90%;
+  min-width: 320px;
+  max-width: 620px;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  z-index: 20;
+}
+
+.artistinfo h1{
+  font-size: 1.8em;
+  margin-bottom: 0;
+}
+
+.artistinfo img {
+  width: 40%;
+  max-width: 130px;
+  border-radius: 20px;
+}
+
+.artist.ng-enter.ng-enter-active,
+.artist.ng-leave {
+  opacity: 1;
+  height: 80px;
+  overflow: hidden;
+}
+
+.artist.ng-leave.ng-leave-active,
+.artist.ng-enter {
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+}
+

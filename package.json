@@ -1,0 +1,15 @@
+{
+  "name": "Attendance",
+  "version": "0.0.1",
+  "description": "An check-in application that helps you take attendance and give away prizes at an event.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/planetoftheweb/attendance.git"
+  },
+  "author": "Ray Villalobos",
+  "devDependencies": {
+    "gulp": "^3.8.7",
+    "gulp-util": "^2.2.20",
+    "gulp-connect": "^2.0.6",
+  }
+}
