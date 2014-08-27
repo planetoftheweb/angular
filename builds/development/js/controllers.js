@@ -9,11 +9,9 @@ artistControllers.controller('ListController', ['$scope', '$firebase', function(
 
 artistControllers.controller('DetailsController', ['$scope', '$firebase', '$routeParams', function($scope, $firebase, $routeParams) {
     var ref = new Firebase("https://artistlist.firebaseio.com/");
-    $scope.artists = $firebase(ref).$asArray();
     $scope.whichItem = $routeParams.itemId;
-
-    $scope.artists.$loaded().then(function() {
-
+    $scope.artists = $firebase(ref).$asArray();
+    $scope.artists.$loaded(function() {
       if (Number($routeParams.itemId) > 0) {
         $scope.prevItem = Number($routeParams.itemId)-1;
       } else {
@@ -25,7 +23,6 @@ artistControllers.controller('DetailsController', ['$scope', '$firebase', '$rout
       } else {
         $scope.nextItem = 0;
       }
-
     });
 }]);
 
