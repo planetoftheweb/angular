@@ -10,6 +10,6 @@
   "devDependencies": {
     "gulp": "^3.8.7",
     "gulp-util": "^2.2.20",
-    "gulp-connect": "^2.0.6",
+    "gulp-connect": "^2.0.6"
   }
 }

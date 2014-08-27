@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
   gutil = require('gulp-util'),
-  connect = require('gulp-connect'),
+  connect = require('gulp-connect');
 
 gulp.task('js', function() {
   gulp.src('builds/development/js/*.js')
@@ -26,7 +26,7 @@ gulp.task('watch', function() {
 
 gulp.task('connect', function() {
   connect.server({
-    root: outputDir,
+    root: 'builds/development/',
     livereload: true
   });
 });
