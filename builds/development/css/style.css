@@ -196,6 +196,7 @@ a.small {
   font-family: 'Droid Sans', sans-serif;
   width: 100%;
   padding: 10px 0 10px 15px;
+  margin: 10px 0;
   font-size: 1rem;
   color: #475B62;
   background: rgba(255,255,255,0.4);
