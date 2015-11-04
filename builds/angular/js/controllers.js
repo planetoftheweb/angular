@@ -1,28 +1,29 @@
-var artistControllers = angular.module('artistControllers', ['ngAnimate', 'firebase']);
+var artistControllers = angular.module('artistControllers', ['ngAnimate']);
 
-artistControllers.controller('ListController', ['$scope', '$firebase', function($scope, $firebase) {
-    var ref = new Firebase("https://artistlist.firebaseio.com/");
-    var data = $firebase(ref);
-    $scope.artists = data.$asArray();
+artistControllers.controller('ListController', ['$scope', '$http', function($scope, $http) {
+  $http.get('js/data.json').success(function(data) {
+    $scope.artists = data;
     $scope.artistOrder = 'name';
+  });
 }]);
 
-artistControllers.controller('DetailsController', ['$scope', '$firebase', '$routeParams', function($scope, $firebase, $routeParams) {
-    var ref = new Firebase("https://artistlist.firebaseio.com/");
+artistControllers.controller('DetailsController', ['$scope', '$http','$routeParams', function($scope, $http, $routeParams) {
+  $http.get('js/data.json').success(function(data) {
+    $scope.artists = data;
     $scope.whichItem = $routeParams.itemId;
-    $scope.artists = $firebase(ref).$asArray();
-    $scope.artists.$loaded(function() {
-      if (Number($routeParams.itemId) > 0) {
-        $scope.prevItem = Number($routeParams.itemId)-1;
-      } else {
-        $scope.prevItem = Number($scope.artists.length)-1;
-      }
 
-      if (Number($routeParams.itemId) < Number($scope.artists.length)-1) {
-        $scope.nextItem = Number($routeParams.itemId)+1;
-      } else {
-        $scope.nextItem = 0;
-      }
-    });
+    if ($routeParams.itemId > 0) {
+      $scope.prevItem = Number($routeParams.itemId)-1;
+    } else {
+      $scope.prevItem = $scope.artists.length-1;
+    }
+
+    if ($routeParams.itemId < $scope.artists.length-1) {
+      $scope.nextItem = Number($routeParams.itemId)+1;
+    } else {
+      $scope.nextItem = 0;
+    }
+
+  });
 }]);
 
