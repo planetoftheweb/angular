@@ -1,15 +1,14 @@
 {
-  "name": "Attendance",
-  "version": "0.0.1",
-  "description": "An check-in application that helps you take attendance and give away prizes at an event.",
+  "name": "AngularJS",
+  "version": "0.0.2",
+  "description": "This project is the repository for my course Up and Running with AngularJS course on Lynda.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/planetoftheweb/attendance.git"
+    "url": "https://github.com/planetoftheweb/angular.git"
   },
   "author": "Ray Villalobos",
   "devDependencies": {
     "gulp": "^3.8.7",
-    "gulp-util": "^2.2.20",
-    "gulp-connect": "^2.0.6"
+    "gulp-webserver": "^0.9.1"
   }
 }

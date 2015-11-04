@@ -1,34 +1,32 @@
 var gulp = require('gulp'),
-  gutil = require('gulp-util'),
-  connect = require('gulp-connect');
+  webserver = require('gulp-webserver'),
+  target = 'builds/angular/';
 
 gulp.task('js', function() {
-  gulp.src('builds/development/js/*.js')
-    .pipe(connect.reload())
+  gulp.src(target + 'js/**/*');
 });
 
 gulp.task('html', function() {
-  gulp.src('builds/development/*.html')
-    .pipe(connect.reload())
+  gulp.src(target + '*.html');
 });
 
 gulp.task('css', function() {
-  gulp.src('builds/development/css/*.css')
-    .pipe(connect.reload())
+  gulp.src(target + 'css/*.css');
 });
 
 gulp.task('watch', function() {
-  gulp.watch('builds/development/js/*.js', ['js']);
-  gulp.watch('builds/development/css/*.css', ['css']);
-  gulp.watch(['builds/development/*.html',
-    'builds/development/partials/*.html'], ['html']);
+  gulp.watch(target + 'js/**/*', ['js']);
+  gulp.watch(target + 'css/*.css', ['css']);
+  gulp.watch([target + '*.html',
+    target + 'views/*.html'], ['html']);
 });
 
-gulp.task('connect', function() {
-  connect.server({
-    root: 'builds/development/',
-    livereload: true
-  });
+gulp.task('webserver', function() {
+  gulp.src(target)
+    .pipe(webserver({
+      livereload: true,
+      open: true
+    }));
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'css', 'connect']);
+gulp.task('default', ['watch', 'html', 'js', 'css', 'webserver']);

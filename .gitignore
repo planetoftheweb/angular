@@ -1,5 +1,4 @@
 .DS_Store
 node_modules
 .tmp
-builds/**/images/*
 npm-debug.log
