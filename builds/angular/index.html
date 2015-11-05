@@ -5,20 +5,12 @@
   <title>Angular Demo</title>
   <script src="lib/angular/angular.min.js"></script>
   <script src="js/controllers.js"></script>
-  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="main" ng-controller = "MyController">
-  <ul class="artistlist">
-    <li class="artist cf" ng-repeat="item in artists">
-      <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
-      <div class="info">
-        <h2>{{item.name}}</h2>
-        <h3>{{item.reknown}}</h3>
-      </div>
-    </li>
-  </ul>
+<div ng-controller = "MyController">
+  <h1>{{author.name}}</h1>
+  <p>{{ author.title + ', ' + author.company }}</p>
 </div>
 </body>
 </html>
