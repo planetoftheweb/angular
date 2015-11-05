@@ -6,21 +6,7 @@
   <script src="lib/angular/angular.min.js"></script>
 </head>
 <body>
-
-<div ng-controller = "MyController">
-  <h1>{{author.name}}</h1>
-  <p>{{ author.title + ', ' + author.company }}</p>
-</div>
-
-<script>
-
-function MyController($scope) {
-  $scope.author = {
-    'name' : 'Ray Villalobos',
-    'title' : 'Staff Author',
-    'company' : 'Lynda.com'
-  }
-}
-</script>
+  <input type="text" ng-model="name">
+  <h2>Welcome {{name}}</h2>
 </body>
 </html>
