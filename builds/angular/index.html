@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="en" ng-app="myApp">
+<html lang="en" ng-app>
 <head>
   <meta charset="UTF-8">
   <title>Angular Demo</title>
   <script src="lib/angular/angular.min.js"></script>
-  <script src="js/controllers.js"></script>
 </head>
 <body>
 
@@ -12,5 +11,16 @@
   <h1>{{author.name}}</h1>
   <p>{{ author.title + ', ' + author.company }}</p>
 </div>
+
+<script>
+
+function MyController($scope) {
+  $scope.author = {
+    'name' : 'Ray Villalobos',
+    'title' : 'Staff Author',
+    'company' : 'Lynda.com'
+  }
+}
+</script>
 </body>
 </html>
