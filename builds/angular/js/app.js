@@ -3,7 +3,7 @@ var myApp = angular.module('myApp', [
   'artistControllers'
 ]);
 
-myApp.config(['$routeProvider', function($routeProvider) {
+myApp.config(['$routeProvider',"$locationProvider", function($routeProvider, $locationProvider) {
   $routeProvider.
   when('/list', {
     templateUrl: 'partials/list.html',
@@ -16,4 +16,5 @@ myApp.config(['$routeProvider', function($routeProvider) {
   otherwise({
     redirectTo: '/list'
   });
+  $locationProvider.hashPrefix('');
 }]);
