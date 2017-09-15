@@ -1,35 +1,54 @@
-<section class="artistpage">
-  <div class="search">
-    <h1>Artist Directory</h1>
-    <label>search: </label>
-    <input ng-model="query" placeholder="Search for artists" autofocus>
+<div class="container mt-sm-3">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6 card">
+          <div class="card-body">
+            <h4 class="card-title text-secondary">Artist Directory</h4>
+              <div class="form-row mb-2">
+                <div class="col sr-only">
+                  <label class="col-form-label text-right" for="searchQuery">search</label>
+                </div><!-- label -->
+                <div class="col-12">
+                  <input class="form-control form-control-lg" id="searchQuery" placeholder="Search for artists" autofocus
+                  ng-model="query">
+                </div><!-- col-12 -->
+              </div><!-- form-row -->
+              <div class="form-row">
+                <div class="col">
+                  <select class="form-control form-control-inline mr-3 w-100"
+                    ng-model="artistOrder">
+                    <option value="name">Name</option>
+                    <option value="reknown">Reknown</option>
+                  </select>
+                </div><!-- col -->
+                <div class="col-5 col-md-4">
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label"><input class="form-check-input" type="radio" ng-model="direction" name="direction" checked> asc</label>
+                  </div><!-- form-check -->
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label"><input class="form-check-input" type="radio" ng-model="direction" name="direction" value="reverse"> desc</label>
+                  </div><!-- form-check -->
+                </div><!-- col -->
+          </div><!-- card-body -->
+      </div><!-- col-12 -->
+    </div><!-- row -->
+</div><!-- col-container -->
 
-    <label class="formgroup">by:
-      <select ng-model="artistOrder">
-        <option value="name">Name</option>
-        <option value="reknown">Reknown</option>
-      </select>
-    </label>
-
-    <label class="formgroup">
-      <input type="radio" ng-model="direction" name="direction" checked>
-      ascending
-     </label>
-    <label class="formgroup">
-      <input type="radio" ng-model="direction" name="direction" value="reverse">
-      descending
-    </label>
-   
-  </div>
-  <ul class="artistlist" ng-show="query">
-    <li ng-animate="'animate'" class="artist cf" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
-      <a href="#/details/{{artists.indexOf(item)}}">
-        <img ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
-        <div class="info">
-          <h2>{{item.name}}</h2>
-          <h3>{{item.reknown}}</h3>
-        </div>
-      </a>
-    </li>
-  </ul>  
-</section>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-12 col-sm-9 col-md-7 col-lg-5">
+      <ul class="list-group d-flex" ng-show="query">
+        <li class="list-group-item align-items-center" ng-animate="'animate'" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+          <a href="#/details/{{artists.indexOf(item)}}">
+            <div class="media">
+                <img class="rounded-circle mr-3" style="width:60px" ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+                <div class="media-body">
+                  <h5 class="my-0 text-secondary">{{item.name}}</h5>
+                  <div class="text-muted">{{item.reknown}}</div>
+                </div><!-- media-body -->
+            </div><!-- media -->
+          </a>
+        </li>
+      </ul>
+    </div><!-- col-12 -->
+  </div><!-- row -->
+</div><!-- col-container -->

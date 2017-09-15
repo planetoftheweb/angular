@@ -1,13 +1,21 @@
-<section class="artistinfo">
-  <div class="artist cf" ng-model="artists">
-    <a href="#/details/{{prevItem}}" class="btn btn-left">&lt;</a>
-    <a href="#/details/{{nextItem}}" class="btn btn-right">&gt;</a>
-    <h1>{{artists[whichItem].name}}</h1>
-    <div class="info">
-      <h3>{{artists[whichItem].reknown}}</h3>
-      <img ng-src="images/{{artists[whichItem].shortname}}_tn.jpg" alt="Photo of {{artists[whichItem].name}}">
-      <div class="bio">{{artists[whichItem].bio}}</div>
+<div class="container">
+  <div class="row">
+    <div class="col-12 mt-3">
+        <div class="card">
+          <div class="card-header d-flex justify-content-between">
+            <h2 class="card-title my-0">{{artists[whichItem].name}}</h2>
+            <nav>
+              <a class="btn btn-secondary" href="#/details/{{prevItem}}">&lt;</a>
+              <a class="btn btn-secondary" href="index.html">&bull;</a>
+              <a class="btn btn-secondary" href="#/details/{{nextItem}}">&gt;</a>
+            </nav>
+          </div>
+          <div class="card-body" ng-model="artists">
+            <h4 class="card-title text-secondary">{{artists[whichItem].reknown}}</h4>
+            <img class="float-left mr-2 rounded" ng-src="images/{{artists[whichItem].shortname}}_tn.jpg" alt="Photo of {{artists[whichItem].name}}">
+            <div class="card-text">{{artists[whichItem].bio}}</div>
+          </div>
+        </div>
     </div>
   </div>
-  <a href="index.html">&laquo; Back to search</a>
-</section>
+</div>
