@@ -1,16 +1,32 @@
+body {
+  font-weight: 100;
+}
+
+h1, h2, h3, h4, h5, h6, p, input {
+  font-weight: 100;
+}
+
 .artist-list {
   line-height: 100%;  
 }
+
+.artist-list .list-group-item {
+  padding: .3rem 1.5rem;
+}  
 
 .artist-list .list-group-item:first-child {
   border-top: none;
   border-radius: 0;
 }
 
+.artist-list .list-group-item img {
+  width: 70px;
+}
+
 .artist-list .list-group-item:hover {
   background-color: #f8f9fa;
 }
 
-.artist-list a:hover {
+.artist-list a {
   text-decoration: none;
 }

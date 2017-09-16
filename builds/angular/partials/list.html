@@ -2,7 +2,7 @@
     <div class="row justify-content-center">
       <div class="col-12 col-md-8 col-lg-6 card">
           <div class="card-body">
-            <h4 class="card-title text-secondary">Artist Directory</h4>
+            <h2 class="card-title text-dark">Artist Directory</h2>
               <div class="form-row mb-2">
                 <div class="col sr-only">
                   <label class="col-form-label text-right" for="searchQuery">search</label>
@@ -22,10 +22,12 @@
                 </div><!-- col -->
                 <div class="col-5 col-md-4">
                   <div class="form-check form-check-inline">
-                    <label class="form-check-label"><input class="form-check-input" type="radio" ng-model="direction" name="direction" checked> asc</label>
+                    <label class="form-check-label"><input class="form-check-input" type="radio"
+                      ng-model="direction" name="direction" checked> asc</label>
                   </div><!-- form-check -->
                   <div class="form-check form-check-inline">
-                    <label class="form-check-label"><input class="form-check-input" type="radio" ng-model="direction" name="direction" value="reverse"> desc</label>
+                    <label class="form-check-label"><input class="form-check-input" type="radio"  name="direction" value="reverse"
+                      ng-model="direction"> desc</label>
                   </div><!-- form-check -->
                 </div><!-- col -->
           </div><!-- card-body -->
@@ -33,17 +35,22 @@
     </div><!-- row -->
 </div><!-- col-container -->
 
-<div class="container">
+<div class="artist-list container">
   <div class="row justify-content-center">
     <div class="col-12 col-sm-9 col-md-7 col-lg-5">
-      <ul class="list-group d-flex" ng-show="query">
-        <li class="list-group-item align-items-center" ng-repeat="item in artists | filter: query | orderBy: artistOrder:direction">
+      <ul class=" list-group d-flex"
+        ng-show="query">
+        <li class="list-group-item"
+          ng-repeat="item in artists |
+          filter: query |
+          orderBy: artistOrder:direction">
           <a href="#/details/{{artists.indexOf(item)}}">
-            <div class="media">
-                <img class="rounded-circle mr-3" style="width:60px" ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
+            <div class="media d-flex align-items-center">
+                <img class="rounded-circle mr-3"
+                  ng-src="images/{{item.shortname}}_tn.jpg" alt="Photo of {{item.name}}">
                 <div class="media-body">
-                  <h5 class="my-0 text-secondary">{{item.name}}</h5>
-                  <div class="text-muted">{{item.reknown}}</div>
+                  <h5 class="my-0 text-dark">{{item.name}}</h5>
+                  <div class="text-secondary font-italic">{{item.reknown}}</div>
                 </div><!-- media-body -->
             </div><!-- media -->
           </a>
