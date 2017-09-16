@@ -1,9 +1,8 @@
-# Up and Running with AngularJS
-![Up and Running with AngularJS](hero.png)
-This is the repository for my course, [Up and Running with AngularJS](http://www.lynda.com/AngularJS-tutorials/Up-Running-AngularJS/154414-2.html). The full course is available at [lynda.com](http://lynda.com).
+# Learn AngularJS
+This is the repository for my course, [Learn AngularJS](http://www.lynda.com/AngularJS-tutorials/Up-Running-AngularJS/154414-2.html). 
 
 ## Course Description
-Get a fresh look at AngularJS, a "superheroic" framework for building single-page web applications fast. Ray Villalobos shows you how to understand the practical uses of AngularJS with a directory search project—a traditional type of web app you can add to your existing sites. He defines the MVC architecture underlying AngularJS: the model (your data), views (how data is flowed into your template), and controllers (the JavaScript that links the two together). You then learn how to divide your project into modules; work with services like $http, $routeProvider, and animation; and set up deep linking and navigation. Start now, and learn the simple way to build your own complex web application.
+Get a fresh look at AngularJS, a "superheroic" framework for building single-page web applications fast. Ray Villalobos shows you how to understand the practical uses of AngularJS with a directory search project—a traditional type of web app you can add to your existing sites. He defines the MVC architecture underlying AngularJS: the model (your data), views (how data is flowed into your template), and controllers (the JavaScript that links the two together). You then learn how to divide your project into modules; work with services like $http, $routeProvider and set up deep linking. Start now, and learn the simple way to build your own complex web application.
 
 ## Topics include:
 - What is AngularJS?
@@ -29,4 +28,4 @@ This repository has branches for each of the videos in the course. You can use t
 For more help setting up a comprehensive Gulp.js workflow, check out [Web Project Workflows with Gulp.js, Git, and Browserify](http://www.lynda.com/Web-Web-Design-tutorials/Web-Project-Workflows-Gulpjs-Git-Browserify/154416-2.html).
 
 ## More Stuff
-Check out some of my [other courses on lynda.com](http://lynda.com/rayvillalobos). You can also check out my [youtube channel](http://youtube.com/planetoftheweb), [follow me on twitter](http://twitter.com/planetoftheweb), or read [my blog](http://raybo.org).
+Check out some of my other courses on [LinkedIn Learning](https://www.linkedin.com/learning/instructors/ray-villalobos). You can also check out my [youtube channel](http://youtube.com/planetoftheweb), [follow me on twitter](http://twitter.com/planetoftheweb), or read [my blog](http://raybo.org).
