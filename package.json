@@ -1,14 +1,12 @@
 {
-  "name": "AngularJS",
-  "version": "0.0.2",
-  "description": "This project is the repository for my course Up and Running with AngularJS course on Lynda.com",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/planetoftheweb/angular.git"
-  },
-  "author": "Ray Villalobos",
+  "name": "miniserver",
+  "version": "1.0.0",
+  "description": "This package.json allows you to run a mini-server just for previewing presentations.",
+  "main": "gulpfile.js",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-postcss": "^6.4.0",
     "gulp-webserver": "^0.9.1"
-  }
+  },
+  "author": "Ray Villalobos"
 }

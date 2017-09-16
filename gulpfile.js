@@ -1,32 +1,30 @@
-var gulp = require('gulp'),
+const gulp = require('gulp'),
   webserver = require('gulp-webserver'),
-  target = 'builds/angular/';
 
-gulp.task('js', function() {
-  gulp.src(target + 'js/**/*');
-});
+  source = './',
+  dest = './';
 
 gulp.task('html', function() {
-  gulp.src(target + '*.html');
+  gulp.src(dest + '**/*.html');
 });
 
+// Regular CSS
 gulp.task('css', function() {
-  gulp.src(target + 'css/*.css');
+  gulp.src(dest + '**/*.css');
 });
 
 gulp.task('watch', function() {
-  gulp.watch(target + 'js/**/*', ['js']);
-  gulp.watch(target + 'css/*.css', ['css']);
-  gulp.watch([target + '*.html',
-    target + 'views/*.html'], ['html']);
+  gulp.watch(source + '**/*.css', ['css']); //CSS
+  gulp.watch(source + '**/*.html', ['html']);
 });
 
 gulp.task('webserver', function() {
-  gulp.src(target)
+  gulp.src(dest)
     .pipe(webserver({
       livereload: true,
+      port: 3333,
       open: true
-    }));
+    }));    
 });
 
-gulp.task('default', ['watch', 'html', 'js', 'css', 'webserver']);
+gulp.task('default', ['webserver','watch']);
