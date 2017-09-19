@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html ng-app>
 <head>
   <meta charset="utf-8">
   <title>AngularJS</title>
@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
 
+  <script src="lib/angular/angular.min.js"></script>
 </head>
 <body class="bg-secondary">
 
@@ -19,11 +20,13 @@
 
               <div class="form-row mb-2">
                 <div class="col">
-                  <label class="col-form-label text-right" for="searchQuery">search</label>
+                  <label class="col-form-label text-right" for="searchQuery">
+                    search {{ 'for: ' + query }}</label>
                 </div><!-- label -->
                 
                 <div class="col-12">
-                  <input class="form-control form-control-lg" id="searchQuery" placeholder="Search for artists" autofocus>
+                  <input class="form-control form-control-lg" id="searchQuery" placeholder="Search for artists" autofocus
+                  ng-model="query">
                 </div><!-- col-12 -->
               </div><!-- form-row -->
 
