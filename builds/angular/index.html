@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="myApp">
 <head>
   <meta charset="utf-8">
   <title>AngularJS</title>
@@ -9,8 +9,9 @@
   <link rel="stylesheet" href="css/style.css">
 
   <script src="lib/angular/angular.min.js"></script>
+  <script src="js/app.js"></script>
 </head>
-<body class="bg-secondary">
+<body class="bg-secondary" ng-controller="MyController">
 
   <div class="container mt-sm-3">
     <div class="row justify-content-center">
@@ -34,6 +35,30 @@
       </div><!-- col-12 -->
     </div><!-- row -->
 </div><!-- col-container -->
+
+<div class="artist-list container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-9 col-md-7 col-lg-5">
+        <ul class=" list-group d-flex">
+          <li class="list-group-item">
+  
+              <div class="media d-flex align-items-center">
+                <img class="rounded-circle mr-3"
+                  src="images/{{artist.shortname}}_tn.jpg"
+                  alt="Photo of {{artist.name}}">
+                <div class="media-body">
+                  <h5 class="my-0 text-dark">{{artist.name}}</h5>
+                  <div class="text-secondary font-italic">{{artist.reknown}}</div>
+                </div><!-- media-body -->
+              </div><!-- media -->
+  
+          </li>
+        </ul>
+      </div><!-- col-12 -->
+    </div><!-- row -->
+  </div><!-- col-container -->
+  
+
 
 <script src="lib/jquery/jquery.min.js"></script>
 <script src="lib/bootstrap/popper.min.js"></script>
