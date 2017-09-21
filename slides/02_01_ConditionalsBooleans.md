@@ -1,6 +1,6 @@
 <!-- .slide: data-state="title" -->
 #AngularJS
-Conditionals and Booleans
+Booleans and Conditionals
 
 > > Author Notes:
 Once our data gets more complex, we'll need to have ways to control the display of DOM elements that are tied to how data works in Angular as well as the ability to loop through different data.
