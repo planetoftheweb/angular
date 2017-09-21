@@ -12,7 +12,6 @@ Once our data gets more complex, we'll need to have ways to control the display 
 - `ng-show`, `ng-hide`
 - `ng-if`
 - `ng-repeat`
-
 > > Author Notes:
 Theres' two ways to show or hide data depending on what's happening in your application. There are two related directives called ng-show and ng-hide. They do pretty much the same thing depending on the value of an element. ng-show will display an element if the value of an expression is true, whereas ng-hide will hide the element. Both of these uses classes to show or hide the elements, although the elements will still exist in the DOM
 
