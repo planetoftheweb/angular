@@ -22,5 +22,7 @@ AngularJS gives you a way to modify content through a series of filters. Althoug
 
 Let's take a few minutes to show you how to implement the uppercase filter in our content because they show you how any of the other filters work.
 
+If you want to learn more about these simple filters, make sure you check the documentation at this URL. https://docs.angularjs.org/api/ng/filter
+
 ## Conclusion
-Although converting to uppercase or lowercase isn't something you're going to need often, since it's something that CSS can easily handle,
+Although converting to uppercase or lowercase isn't something you're going to need often, since it's something that CSS can easily handle, it's a good example of how filters work, so let's take a look at more complex filters in the next video.
