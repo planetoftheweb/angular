@@ -47,8 +47,8 @@
                   ng-src="images/{{item.shortname}}_tn.jpg"
                   alt="Photo of {{item.name}}">
                 <div class="media-body">
-                  <h5 class="my-0 text-dark">{{item.name}}</h5>
-                  <div class="text-secondary font-italic">{{item.reknown}}</div>
+                  <h5 class="my-0 text-dark">{{item.name | uppercase}}</h5>
+                  <div class="text-secondary font-italic">{{item.reknown | lowercase }}</div>
                 </div><!-- media-body -->
               </div><!-- media -->
   
