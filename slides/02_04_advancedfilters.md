@@ -14,7 +14,7 @@ In the last video, we looked at the text transformation filters. Interesting, bu
 - `orderBy:key:reverse`
 
 > > Author Notes:
-- The first filter we'll look at is called limitTo and it creates a new array or string by showing you only a certain number o felements from an array. you can control wether it starts from the beginning or the end of the list and what position to start from.
+- The first filter we'll look at is called limitTo and it creates a new array or string by showing you only a certain number of elements from an array. you can control wether it starts from the beginning or the end of the list and what position to start from.
 
 - Although it's a bit confusing, one of the filters is called 'filter' It selects a subset of items from an array and makes a new array from it. We can use it to do a live search of our data.
 
