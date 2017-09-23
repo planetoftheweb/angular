@@ -8,6 +8,10 @@ myApp.config(['$routeProvider', function($routeProvider) {
     .when('/', {
       templateUrl: 'js/partials/search.html',
       controller: 'SearchController'
+    })
+    .when('/details', {
+      templateUrl: 'js/partials/details.html',
+      controller: 'DetailsController'
     });
 }]);
 
