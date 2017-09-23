@@ -1,7 +1,5 @@
-This is a beginner course, but I'm starting with the assumption that there's a few things you already know before going through this course. I'm assuming you already know the basics of HTML and CSS and how to work with the file system and have done some basic HTML projects before. If you need help with basic HTML, Check out HTML Essential Training.
+Although this is an introduction to AngularJS, in order to use some of the features you'll need to use a server and have a good understanding of working with web projects.
 
-I also expect you to have some experience with CSS. If you're just getting started with CSS, make sure you've taken something like CSS Fundamentals.
+I'm assuming you already know the basics of HTML and CSS and how to work with the file system and have done some basic HTML projects before. I'm not going to focus on these things and I'll use the Bootstrap Framework for some of the page code. If you need help with that, make sure you take a look at Bootstrap 4 Essential Training.
 
-The exercise files for this course, has everything you need to get started or you can use our practice environments to work with the projects in this course.
-
-If you feel comfortable with these requirements, then it's time to get started.
+The exercise files for this course have everything you need to get started, so if you feel comfortable with these requirements, let's take a look at how to work with the exercises next.
