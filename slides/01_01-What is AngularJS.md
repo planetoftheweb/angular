@@ -37,6 +37,8 @@ AngularJS is technically the old version of the framework so you might be wonder
 - One reason to stay with the first version of angular is that it is pretty stable. The new version of Angular is currently on a schedule that updates to a major version every six months. That can be really disruptive if you've got a lot of code to maintain and you don't have time to do major revisions of your code very often.
 - Also, the new version of Angular requires a lot of tooling in order to work, so it takes longer to set up. With the older version of angular, all you have to do is load up script tags into your HTML, so it's as easy as installing something like jQuery or Bootstrap.
 
+---
+
 <!-- .slide: data-state="title" -->
 #AngularJS
 Downloading
