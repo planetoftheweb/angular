@@ -23,7 +23,7 @@ What is AngularJS?
 
 ---
 
-## AngularJs vs Angular
+## AngularJS vs Angular
 
 - Different paradigm
 - MVC vs components
