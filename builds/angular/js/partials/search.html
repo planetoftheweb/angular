@@ -42,7 +42,7 @@
     </div><!-- row -->
 </div><!-- col-container -->
 
-<div class="artist-list container">
+<div class="artist-list container" ng-if="query">
     <div class="row justify-content-center">
       <div class="col-12 col-sm-9 col-md-7 col-lg-5">
         <ul class=" list-group d-flex">
@@ -50,6 +50,7 @@
           ng-repeat="item in artists | filter: query |
           orderBy:artistOrder:direction">
   
+              <a href="#/details/{{artists.indexOf(item)}}">
               <div class="media d-flex align-items-center">
                 <img class="rounded-circle mr-3"
                   ng-src="images/{{item.shortname}}_tn.jpg"
@@ -59,6 +60,7 @@
                   <div class="text-secondary font-italic">{{item.reknown}}</div>
                 </div><!-- media-body -->
               </div><!-- media -->
+              </a>
   
           </li>
         </ul>
