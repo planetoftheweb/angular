@@ -1,32 +1,38 @@
-var gulp = require('gulp'),
-  webserver = require('gulp-webserver'),
-  target = 'builds/angular/';
+var gulp = require("gulp"),
+  browserSync = require("browser-sync").create(),
+  source = "./builds/angular/",
+  dest = "./builds/angular/";
 
-gulp.task('js', function() {
-  gulp.src(target + 'js/**/*');
-});
+function html() {
+  return gulp.src(dest + "**/*.html");
+}
 
-gulp.task('html', function() {
-  gulp.src(target + '*.html');
-});
+function js() {
+  return gulp.src(dest + "**/*.js");
+}
 
-gulp.task('css', function() {
-  gulp.src(target + 'css/*.css');
-});
+function styles() {
+  return gulp.src(dest + "**/*.css");
+}
 
-gulp.task('watch', function() {
-  gulp.watch(target + 'js/**/*', ['js']);
-  gulp.watch(target + 'css/*.css', ['css']);
-  gulp.watch([target + '*.html',
-    target + 'views/*.html'], ['html']);
-});
+function watch() {
+  gulp.watch(source + "js/**/*.js", js).on("change", browserSync.reload);
+  gulp.watch(source + "css/**/*.css", styles).on("change", browserSync.reload);
+  gulp.watch(source + "index.html", html).on("change", browserSync.reload);
+}
+function server() {
+  browserSync.init({
+    notify: false,
+    server: {
+      baseDir: source
+    }
+  });
+}
 
-gulp.task('webserver', function() {
-  gulp.src(target)
-    .pipe(webserver({
-      livereload: true,
-      open: true
-    }));
-});
+  gulp.watch(source + "css/**/*.css", styles).on("change", browserSync.reload);
+  gulp.watch(source + "index.html", html).on("change", browserSync.reload);
+  gulp.watch(source + "index.html", js).on("change", browserSync.reload);
 
-gulp.task('default', ['watch', 'html', 'js', 'css', 'webserver']);
+var build = gulp.series(gulp.parallel(js, styles, html), server, watch);
+
+gulp.task("default", build)
