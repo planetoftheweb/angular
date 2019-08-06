@@ -29,9 +29,9 @@ function server() {
   });
 }
 
+  gulp.watch(source + "js/**/*.js", js).on("change", browserSync.reload);
   gulp.watch(source + "css/**/*.css", styles).on("change", browserSync.reload);
   gulp.watch(source + "index.html", html).on("change", browserSync.reload);
-  gulp.watch(source + "index.html", js).on("change", browserSync.reload);
 
 var build = gulp.series(gulp.parallel(js, styles, html), server, watch);
 
