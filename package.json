@@ -1,6 +1,6 @@
 {
   "name": "AngularJS",
-  "version": "0.0.2",
+  "version": "2.0.0",
   "description": "This project is the repository for my course Up and Running with AngularJS course on Lynda.com",
   "repository": {
     "type": "git",
@@ -8,7 +8,7 @@
   },
   "author": "Ray Villalobos",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1"
+    "gulp": "^4.0.2",
+    "browser-sync": "^2.26.7"
   }
 }
