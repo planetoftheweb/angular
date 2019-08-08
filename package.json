@@ -8,7 +8,7 @@
   },
   "author": "Ray Villalobos",
   "devDependencies": {
-    "gulp": "^3.9.1",
-    "gulp-webserver": "^0.9.1"
+    "gulp": "^4.0.2",
+    "browser-sync": "^2.26.7"
   }
 }
