@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="row">
+      <div class="col-12 mt-3">
+          <div class="card">
+            <div class="card-header d-flex align-items-start justify-content-between">
+              <h1 class="card-title my-0">{{artists[whichItem].name}}</h1>
+              <nav class="btn-group">
+                <a class="btn btn-sm btn-secondary" 
+                  href="#/details/{{prevItem}}">&lt;</a>
+                <a class="btn btn-sm btn-secondary" 
+                  href="#/">&bull;</a>
+                <a class="btn btn-sm btn-secondary" 
+                  href="#/details/{{nextItem}}">&gt;</a>
+              </nav>
+            </div>
+            <div class="card-body"
+              ng-model="artists">
+              <h4 class="card-title text-dark mt-0">{{artists[whichItem].reknown}}</h4>
+              <img class="float-left mr-2 rounded"
+                ng-src="images/{{artists[whichItem].shortname}}_tn.jpg"
+                alt="Photo of {{artists[whichItem].name}}">
+              <div class="card-text text-secondary">{{artists[whichItem].bio}}</div>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
